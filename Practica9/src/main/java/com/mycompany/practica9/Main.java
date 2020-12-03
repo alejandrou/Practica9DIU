@@ -23,8 +23,8 @@ public class Main extends javax.swing.JFrame {
     private DataView dataView;
     private final String serverName;
     private final String dataBase;
-    private String userName = "estudiante-DIU";
-    private String password = "DIU-aed56-noi";
+    private String userName;
+    private String password;
 
     public Main() {
         initComponents();
@@ -133,8 +133,8 @@ public class Main extends javax.swing.JFrame {
         }
 
         try {
-            //userName = userNameTF.getText();
-            //password = String.valueOf(passwordPF.getPassword());
+            userName = userNameTF.getText();
+            password = String.valueOf(passwordPF.getPassword());
 
             dbAccess = new DBAccess(serverName, dataBase, userName, password);
             dbAccess.connectDatabase();
